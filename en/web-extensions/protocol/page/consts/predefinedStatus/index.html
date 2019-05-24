@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Predefined Status - Seal SC web extension protocol</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link href="../../../css/base.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Predefined Status";
+    var mkdocs_page_input_path = "page/consts/predefinedStatus.md";
+    var mkdocs_page_url = "/documents/en/web-extensions/protocol/page/consts/predefinedStatus/";
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Seal SC web extension protocol</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../..">Getting started</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Types</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../types/extensionWrapper/">ExtensionWrapper</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../types/extensionChecker/">ExtensionChecker</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../types/extensionConnector/">ExtensionConnector</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../types/extensionContractCaller/">ExtensionContractCaller</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../types/extensionActions/">ExtensionActions</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../types/contractWrapper/">ContractWrapper</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../types/result/">Result</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../types/status/">Status</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Consts</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">Predefined Status</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#status-build-function">Status build function</a></li>
+    
+
+    <li class="toctree-l3"><a href="#all-predefined-status-builders">All predefined status builders</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#success">SUCCESS</a></li>
+        
+            <li><a class="toctree-l4" href="#no_extension">NO_EXTENSION</a></li>
+        
+            <li><a class="toctree-l4" href="#not_specified_extension">NOT_SPECIFIED_EXTENSION</a></li>
+        
+            <li><a class="toctree-l4" href="#not_loaded">NOT_LOADED</a></li>
+        
+            <li><a class="toctree-l4" href="#not_support">NOT_SUPPORT</a></li>
+        
+            <li><a class="toctree-l4" href="#not_login">NOT_LOGIN</a></li>
+        
+            <li><a class="toctree-l4" href="#bad_param">BAD_PARAM</a></li>
+        
+            <li><a class="toctree-l4" href="#no_account">NO_ACCOUNT</a></li>
+        
+            <li><a class="toctree-l4" href="#unknown">UNKNOWN</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l3"><a href="#example">Example</a></li>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Utils</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../utils/utils/">Functions</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Seal SC web extension protocol</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Consts &raquo;</li>
+        
+      
+    
+    <li>Predefined Status</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="status-build-function">Status build function<a class="headerlink" href="#status-build-function" title="Permanent link">&para;</a></h2>
+<pre><code class="ecmascript">(userData)=&gt;{return new Status(0, 'success', userData)}
+</code></pre>
+
+<hr />
+<h2 id="all-predefined-status-builders">All predefined status builders<a class="headerlink" href="#all-predefined-status-builders" title="Permanent link">&para;</a></h2>
+<h3 id="success">SUCCESS<a class="headerlink" href="#success" title="Permanent link">&para;</a></h3>
+<pre><code class="ecmascript">SUCCESS(userData)
+</code></pre>
+
+<blockquote>
+<p>Returns:</p>
+<blockquote>
+<p><a href="../../types/status">Status</a>&lt; code: 0, msg: 'success', userData: userData &gt;</p>
+</blockquote>
+</blockquote>
+<h3 id="no_extension">NO_EXTENSION<a class="headerlink" href="#no_extension" title="Permanent link">&para;</a></h3>
+<pre><code class="ecmascript">NO_EXTENSION(userData)
+</code></pre>
+
+<blockquote>
+<p>Returns:</p>
+<blockquote>
+<p><a href="../../types/status">Status</a>&lt; code: 1, msg: 'extension not install.', userData: userData &gt;</p>
+</blockquote>
+</blockquote>
+<h3 id="not_specified_extension">NOT_SPECIFIED_EXTENSION<a class="headerlink" href="#not_specified_extension" title="Permanent link">&para;</a></h3>
+<pre><code class="ecmascript">NOT_SPECIFIED_EXTENSION(userData)
+</code></pre>
+
+<blockquote>
+<p>Returns:</p>
+<blockquote>
+<p><a href="../../types/status">Status</a>&lt; code: 2, msg: 'no specified web extension.', userData: userData &gt;</p>
+</blockquote>
+</blockquote>
+<h3 id="not_loaded">NOT_LOADED<a class="headerlink" href="#not_loaded" title="Permanent link">&para;</a></h3>
+<pre><code class="ecmascript">NOT_LOADED(userData)
+</code></pre>
+
+<blockquote>
+<p>Returns:</p>
+<blockquote>
+<p><a href="../../types/status">Status</a>&lt; code: 3, msg: 'web extension not loaded to seal proxy.', userData: userData &gt;</p>
+</blockquote>
+</blockquote>
+<h3 id="not_support">NOT_SUPPORT<a class="headerlink" href="#not_support" title="Permanent link">&para;</a></h3>
+<pre><code class="ecmascript">NOT_SUPPORT(userData)
+</code></pre>
+
+<blockquote>
+<p>Returns:</p>
+<blockquote>
+<p><a href="../types/status">Status</a>&lt; code: 4, msg: 'not supported operation or type.', userData: userData &gt;</p>
+</blockquote>
+</blockquote>
+<h3 id="not_login">NOT_LOGIN<a class="headerlink" href="#not_login" title="Permanent link">&para;</a></h3>
+<pre><code class="ecmascript">NOT_LOGIN(userData)
+</code></pre>
+
+<blockquote>
+<p>Returns:</p>
+<blockquote>
+<p><a href="../types/status">Status</a>&lt; code: 5, msg: 'web extension not login.', userData: userData &gt;</p>
+</blockquote>
+</blockquote>
+<h3 id="bad_param">BAD_PARAM<a class="headerlink" href="#bad_param" title="Permanent link">&para;</a></h3>
+<pre><code class="ecmascript">BAD_PARAM(userData)
+</code></pre>
+
+<blockquote>
+<p>Returns:</p>
+<blockquote>
+<p><a href="../types/status">Status</a>&lt; code: 6, msg: 'bad action input parameter.', userData: userData &gt;</p>
+</blockquote>
+</blockquote>
+<h3 id="no_account">NO_ACCOUNT<a class="headerlink" href="#no_account" title="Permanent link">&para;</a></h3>
+<pre><code class="ecmascript">NO_ACCOUNT(userData)
+</code></pre>
+
+<blockquote>
+<p>Returns:</p>
+<blockquote>
+<p><a href="../types/status">Status</a>&lt; code: 7, msg: 'no account in extension.', userData: userData &gt;</p>
+</blockquote>
+</blockquote>
+<h3 id="unknown">UNKNOWN<a class="headerlink" href="#unknown" title="Permanent link">&para;</a></h3>
+<pre><code class="ecmascript">UNKNOWN(userData)
+</code></pre>
+
+<blockquote>
+<p>Returns:</p>
+<blockquote>
+<p><a href="../types/status">Status</a>&lt; code: 0x1000, msg: 'unknown error occurred', userData: userData &gt;</p>
+</blockquote>
+</blockquote>
+<hr />
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
+<pre><code class="ecmascript">predefinedStatus.SUCCESS(&quot;any data&quot;)
+&gt; status: Status
+    code: 0
+    msg: &quot;success&quot;
+    userData: &quot;any data&quot;
+</code></pre>
+
+<hr />
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../utils/utils/" class="btn btn-neutral float-right" title="Functions">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../types/status/" class="btn btn-neutral" title="Status"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../types/status/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../utils/utils/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+
+</body>
+</html>

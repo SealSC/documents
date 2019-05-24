@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>ExtensionActions - Seal SC web extension protocol</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link href="../../../css/base.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "ExtensionActions";
+    var mkdocs_page_input_path = "page/types/extensionActions.md";
+    var mkdocs_page_url = "/documents/en/web-extensions/protocol/page/types/extensionActions/";
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Seal SC web extension protocol</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../..">Getting started</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Types</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../extensionWrapper/">ExtensionWrapper</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../extensionChecker/">ExtensionChecker</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../extensionConnector/">ExtensionConnector</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../extensionContractCaller/">ExtensionContractCaller</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">ExtensionActions</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#constructor">Constructor</a></li>
+    
+
+    <li class="toctree-l3"><a href="#property">Property</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#extension">extension</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l3"><a href="#methods">Methods</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#loadcontract">loadContract</a></li>
+        
+            <li><a class="toctree-l4" href="#transfer">transfer</a></li>
+        
+            <li><a class="toctree-l4" href="#transfertoken">transferToken</a></li>
+        
+            <li><a class="toctree-l4" href="#getaccount">getAccount</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../contractWrapper/">ContractWrapper</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../result/">Result</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../status/">Status</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Consts</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../consts/predefinedStatus/">Predefined Status</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Utils</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../utils/utils/">Functions</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Seal SC web extension protocol</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Types &raquo;</li>
+        
+      
+    
+    <li>ExtensionActions</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="constructor">Constructor<a class="headerlink" href="#constructor" title="Permanent link">&para;</a></h2>
+<pre><code class="ecmascript">constructor(extension)
+</code></pre>
+
+<blockquote>
+<p><strong>Parameter</strong><br />
+<code>extension</code> - <code><a href="../extensionWrapper">ExtensionWrapper</a></code></p>
+</blockquote>
+<hr />
+<h2 id="property">Property<a class="headerlink" href="#property" title="Permanent link">&para;</a></h2>
+<h3 id="extension">extension<a class="headerlink" href="#extension" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Type: <a href="../extensionWrapper">ExtensionWrapper</a><br />
+Description: ExtensionWrapper instance passed by constructor. </p>
+</blockquote>
+<hr />
+<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
+<h3 id="loadcontract">loadContract<a class="headerlink" href="#loadcontract" title="Permanent link">&para;</a></h3>
+<pre><code class="ecmascript">async loacContract(abi, address)
+</code></pre>
+
+<blockquote>
+<p><strong>Description</strong></p>
+<blockquote>
+<p>Load smart contract to a <a href="../contractWrapper">ContractWrapper</a> instance.  </p>
+</blockquote>
+<p><strong>Parameters :</strong></p>
+<blockquote>
+<p><code>abi</code> - <code><a href="">Any</a></code>:  </p>
+<blockquote>
+<p>Contract ABI Array, Object or any other types required by the blockchain.  </p>
+</blockquote>
+<p><code>address</code> - <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>:</p>
+<blockquote>
+<p>Contract Address passed by the constructor.   </p>
+</blockquote>
+</blockquote>
+<p><strong>Returns :</strong>  </p>
+<blockquote>
+<p><code>Promise&lt;<a href="../result">Result</a>&lt;<a href="../contractWrapper">ContractWrapper</a>, <a href="./Status">Status</a>&gt;&gt;</code>:</p>
+<blockquote>
+<p>ContractWrapper instance will be set into the data field of Result if success.  </p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h3 id="transfer">transfer<a class="headerlink" href="#transfer" title="Permanent link">&para;</a></h3>
+<pre><code class="ecmascript">async transfer(to, amount, memo, extra)
+</code></pre>
+
+<blockquote>
+<p><strong>Description</strong></p>
+<blockquote>
+<p>Transfer original token of the block. Original token is the base assets of a blockchain, like ETH on Ethereum.  </p>
+</blockquote>
+<p><strong>Parameters :</strong></p>
+<blockquote>
+<p><code>to</code> - <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>:</p>
+<blockquote>
+<p>Assets transfer target address.  </p>
+</blockquote>
+<p><code>amount</code> - <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code>:</p>
+<blockquote>
+<p>How many tokens will be transferred.  </p>
+</blockquote>
+<p><code>memo</code> - <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>:</p>
+<blockquote>
+<p>Transaction's memo.  </p>
+</blockquote>
+<p><code>extra</code> - <code><a href="">Any</a></code>:</p>
+<blockquote>
+<p>Additional data to accommodate the transaction requirements of different blockchains.   </p>
+</blockquote>
+</blockquote>
+<p><strong>Returns :</strong>  </p>
+<blockquote>
+<p><code>Promise&lt;<a href="../result">Result</a>&lt;<a href="../contractWrapper">ContractWrapper</a>, <a href="./Status">Status</a>&gt;&gt;</code>:</p>
+<blockquote>
+<p>Transaction hash will be set into the data field of Result if success.  </p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h3 id="transfertoken">transferToken<a class="headerlink" href="#transfertoken" title="Permanent link">&para;</a></h3>
+<pre><code class="ecmascript">async transferToken(wrapper, to, amount, extra)
+</code></pre>
+
+<blockquote>
+<p><strong>Description</strong></p>
+<blockquote>
+<p>Transfer contract based token. These tokens are issued by smart contract, like ERC 20 token etc.  </p>
+</blockquote>
+<p><strong>Parameters :</strong></p>
+<blockquote>
+<p><code>wrapper</code> - <code><a href="../contractWrapper">ContractWrapper</a></code>:</p>
+<blockquote>
+<p>A ContractWrapper instance returned by <a href="#loadcontract">loadContract</a> method.  </p>
+</blockquote>
+<p><code>to</code> - <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>:</p>
+<blockquote>
+<p>Token transfer target address.  </p>
+</blockquote>
+<p><code>amount</code> - 
+<code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> | 
+<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>:</p>
+<blockquote>
+<p>How many tokens will be transferred. Some of the blockchain accept number with token symbol in the amount string, like "1.000 EOS". </p>
+</blockquote>
+<p><code>extra</code> - <code><a href="">Any</a></code>:</p>
+<blockquote>
+<p>Additional data to accommodate the transaction requirements of different blockchains.   </p>
+</blockquote>
+</blockquote>
+<p><strong>Returns :</strong>  </p>
+<blockquote>
+<p><code>Promise&lt;<a href="../result">Result</a>&lt;<a href="../contractWrapper">ContractWrapper</a>, <a href="./Status">Status</a>&gt;&gt;</code>:</p>
+<blockquote>
+<p>Transaction hash will be set into the data field of Result if success.  </p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h3 id="getaccount">getAccount<a class="headerlink" href="#getaccount" title="Permanent link">&para;</a></h3>
+<pre><code class="ecmascript">async getAccount()
+</code></pre>
+
+<blockquote>
+<p><strong>Description</strong></p>
+<blockquote>
+<p>Get the account loaded in extension.  </p>
+</blockquote>
+<p><strong>Returns :</strong>  </p>
+<blockquote>
+<p><code>Promise&lt;<a href="../result">Result</a>&lt;<a href="../contractWrapper">ContractWrapper</a>, <a href="./Status">Status</a>&gt;&gt;</code>:</p>
+<blockquote>
+<p>Account string will be set into the data field of Result if success.  </p>
+</blockquote>
+</blockquote>
+</blockquote>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../contractWrapper/" class="btn btn-neutral float-right" title="ContractWrapper">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../extensionContractCaller/" class="btn btn-neutral" title="ExtensionContractCaller"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../extensionContractCaller/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../contractWrapper/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+
+</body>
+</html>

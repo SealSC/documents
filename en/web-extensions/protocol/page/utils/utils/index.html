@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Functions - Seal SC web extension protocol</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link href="../../../css/base.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Functions";
+    var mkdocs_page_input_path = "page/utils/utils.md";
+    var mkdocs_page_url = "/documents/en/web-extensions/protocol/page/utils/utils/";
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Seal SC web extension protocol</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../..">Getting started</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Types</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../types/extensionWrapper/">ExtensionWrapper</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../types/extensionChecker/">ExtensionChecker</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../types/extensionConnector/">ExtensionConnector</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../types/extensionContractCaller/">ExtensionContractCaller</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../types/extensionActions/">ExtensionActions</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../types/contractWrapper/">ContractWrapper</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../types/result/">Result</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../types/status/">Status</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Consts</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../consts/predefinedStatus/">Predefined Status</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Utils</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">Functions</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#mulwithpow">mulWithPow</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#example">Example</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l3"><a href="#tofixeddown">toFixedDown</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#example_1">Example</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Seal SC web extension protocol</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Utils &raquo;</li>
+        
+      
+    
+    <li>Functions</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="mulwithpow">mulWithPow<a class="headerlink" href="#mulwithpow" title="Permanent link">&para;</a></h2>
+<pre><code class="ecmascript">mulWithPow(original, base, pow = 1)
+</code></pre>
+
+<blockquote>
+<p><strong>Description</strong></p>
+<blockquote>
+<p>original * Math.pow(base, pow)</p>
+</blockquote>
+<p><strong>Parameters :</strong></p>
+<blockquote>
+<p><code>original</code> - <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code>:  </p>
+<blockquote>
+<p>The multiplier</p>
+</blockquote>
+<p><code>base</code> -  <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code>:  </p>
+<blockquote>
+<p>The base number</p>
+</blockquote>
+<p><code>pow</code> - <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code>:  </p>
+<blockquote>
+<p>The power number</p>
+</blockquote>
+</blockquote>
+<p><strong>Returns :</strong>  </p>
+<blockquote>
+<p><code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>:</p>
+<blockquote>
+<p>Result string</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<pre><code class="ecmascript">mulWithPow(2, 10, 3) // 2 * Math.pow(10, 3)
+&gt; &quot;2000&quot;
+</code></pre>
+
+<hr />
+<h2 id="tofixeddown">toFixedDown<a class="headerlink" href="#tofixeddown" title="Permanent link">&para;</a></h2>
+<pre><code class="ecmascript">toFixedDown(num, fixed)
+</code></pre>
+
+<blockquote>
+<p><strong>Description</strong></p>
+<blockquote>
+<p>Truncate the float number to the fixed decimal.</p>
+</blockquote>
+<p><strong>Parameters :</strong></p>
+<blockquote>
+<p><code>num</code> - <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code>:  </p>
+<blockquote>
+<p>The float number.</p>
+</blockquote>
+<p><code>fixed</code> -  <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code>:  </p>
+<blockquote>
+<p>The decimal you want to keep.</p>
+</blockquote>
+</blockquote>
+<p><strong>Returns :</strong>  </p>
+<blockquote>
+<p><code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>:</p>
+<blockquote>
+<p>Result string</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h3>
+<pre><code class="ecmascript">toFixedDown(2.0998, 3)
+&gt; &quot;2.099&quot;
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../../consts/predefinedStatus/" class="btn btn-neutral" title="Predefined Status"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../consts/predefinedStatus/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+
+</body>
+</html>
