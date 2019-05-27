@@ -1,0 +1,78 @@
+a:visited {
+  color: #2980B9;
+}
+
+a.icon-home:visited {
+  color: white;
+}
+
+.toctree-l1 a:visited {
+  color: #838383 !important;
+}
+
+.toctree-l1 a.current:visited {
+  color: #404040 !important;
+}
+
+code {
+  padding-left: 0;
+  border: 0;
+  font-size: 16px;
+  background: transparent;
+}
+
+p {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+blockquote {
+  margin-bottom: 12px !important;
+}
+
+.section > blockquote {
+  margin: 0 !important;
+  margin-bottom: 40px !important;
+  padding: 10px;
+  background: #f0f4f7;
+  border-radius: 8px;
+}
+
+strong {
+  font-size: 16px;
+}
+
+h3 {
+  color: #2980B9;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+h2 + pre, h3 + pre {
+  margin-top: -6px;
+  margin-bottom: 12px;
+}
+
+h2 + pre > code, h3 + pre > code {
+  background: #ffffff !important;
+  padding: 0 !important;
+}
+
+h2[id*='example'] + pre > code,
+h3[id*='example'] + pre > code {
+  margin-top: 16px;
+  background: #f1fed1 !important;
+  padding: 10px !important;
+  border: 1px solid #f0f4f7;
+  border-radius: 6px;
+}
+
+
+footer {
+  padding-top: 40px;
+}
+
+.toctree-l4 {
+  margin-left: 20px;
+  font-size: 12px !important;
+}

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>MetamaskExtension - Seal SC web extension metamask</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link href="../../../css/base.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "MetamaskExtension";
+    var mkdocs_page_input_path = "page/apiRef/extensionWrapper.md";
+    var mkdocs_page_url = "/documents/en/web-extensions/metamask/page/apiRef/extensionWrapper/";
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Seal SC web extension metamask</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../..">Getting started</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">API reference</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">MetamaskExtension</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#extends">Extends</a></li>
+    
+
+    <li class="toctree-l3"><a href="#constructor">Constructor</a></li>
+    
+
+    <li class="toctree-l3"><a href="#property">Property</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#checker">checker</a></li>
+        
+            <li><a class="toctree-l4" href="#connector">connector</a></li>
+        
+            <li><a class="toctree-l4" href="#contractcaller">contractCaller</a></li>
+        
+            <li><a class="toctree-l4" href="#actions">actions</a></li>
+        
+            <li><a class="toctree-l4" href="#webjsinstance">webjsInstance</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l3"><a href="#methods">Methods</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#load">load</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../extensionChecker/">MetamaskChecker</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../extensionConnector/">MetamaskConnector</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../extensionContractCaller/">MetamaskContractCaller</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../extensionActions/">MetamaskActions</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../transactionExtraInfo/">TransactionExtraInfo</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Seal SC web extension metamask</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>API reference &raquo;</li>
+        
+      
+    
+    <li>MetamaskExtension</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="extends">Extends<a class="headerlink" href="#extends" title="Permanent link">&para;</a></h2>
+<p><a href="https://sealsc.github.io/documents/en/web-extensions/protocol/page/types/extensionWrapper/">ExtensionWrapper</a></p>
+<hr />
+<h2 id="constructor">Constructor<a class="headerlink" href="#constructor" title="Permanent link">&para;</a></h2>
+<pre><code class="ecmascript">constructor()
+</code></pre>
+
+<hr />
+<h2 id="property">Property<a class="headerlink" href="#property" title="Permanent link">&para;</a></h2>
+<h3 id="checker">checker<a class="headerlink" href="#checker" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Type: <a href="../extensionChecker">MetamaskChecker</a><br />
+Description: Provide some basic check function such as isLogin, isMainnet etc. </p>
+</blockquote>
+<h3 id="connector">connector<a class="headerlink" href="#connector" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Type: <a href="../extensionConnector">MetamaskConnector</a><br />
+Description: Provide connection capability to the web extension.   </p>
+</blockquote>
+<h3 id="contractcaller">contractCaller<a class="headerlink" href="#contractcaller" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Type: <a href="../extensionContractCaller">MetamaskContractCaller</a><br />
+Description: Provide smart contract invoke and read capability.  </p>
+</blockquote>
+<h3 id="actions">actions<a class="headerlink" href="#actions" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Type: <a href="../extensionActions">MetamaskActions</a><br />
+Description: Provide sets of functions to access Ethereum, such as transfer, getAccount.  </p>
+</blockquote>
+<h3 id="webjsinstance">webjsInstance<a class="headerlink" href="#webjsinstance" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Type: <a href="https://github.com/ethereum/web3.js">Web3</a><br />
+Description: A Web3 instance.</p>
+</blockquote>
+<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
+<h3 id="load">load<a class="headerlink" href="#load" title="Permanent link">&para;</a></h3>
+<pre><code class="ecmascript">async load()
+</code></pre>
+
+<blockquote>
+<p><strong>Description</strong></p>
+<blockquote>
+<p>Load Web3 instance to webjsInstance property.  </p>
+</blockquote>
+<p><strong>Returns :</strong>  </p>
+<blockquote>
+<p><code>Promise&lt;<a href="https://sealsc.github.io/documents/en/web-extensions/protocol/page/types/result/">Result</a>&lt;<a href="https://github.com/ethereum/web3.js">Web3</a>, <a href="https://sealsc.github.io/documents/en/web-extensions/protocol/page/types/status/">Status</a>&gt;&gt;</code>:</p>
+<blockquote>
+<p>A Web3 instance will be set into the data field of Result if success.  </p>
+</blockquote>
+</blockquote>
+</blockquote>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../extensionChecker/" class="btn btn-neutral float-right" title="MetamaskChecker">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../.." class="btn btn-neutral" title="Getting started"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../extensionChecker/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+
+</body>
+</html>
