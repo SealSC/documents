@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Usage - Seal SC web extension proxy</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link href="../../css/base.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Usage";
+    var mkdocs_page_input_path = "page/usage.md";
+    var mkdocs_page_url = "/documents/en/web-extensions/proxy/page/usage/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Seal SC web extension proxy</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Getting started</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../extensionProxy/">ExtensionProxy</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../loader/">Loader</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Usage</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#example">Example</a></li>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Seal SC web extension proxy</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Usage</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
+<pre><code class="ecmascript">//this is an example of MetaMask web extension.
+....
+&lt;!--import basic data of Ethereum contract, include abi &amp; contract address.--&gt;
+&lt;script src=&quot;eth-contract.js&quot;&gt;&lt;/script&gt;
+&lt;!--import ExtensionProxy--&gt;
+&lt;script src=&quot;sealsc-web-extension-proxy.js&quot;&gt;&lt;/script&gt;
+&lt;!--import MetaMask wrapper which conform Seal SC web extension protocol--&gt;
+&lt;script src=&quot;./sealsc-web-extension/sealsc-web-extension-metamask.js&quot;&gt;&lt;/script&gt;
+....
+async function loadAndTest() {
+    //load MetaMask wrapper to proxy
+    metamaskProxy = await sealscWebExtensionProxy
+                            .load(sealscWebExtensionMetamask.metamask)
+                            .then(p=&gt;p.data)
+
+    //do the test
+    proxyTest(metamaskProxy, {
+            receiver: &quot;A Ethereum address to receive test tokens.&quot;,
+            contractData: {
+              abi: ethAbi,
+              address: ethContractAddress,
+            },
+            transferData: {
+              amount: 1,
+              memo: '',
+              extra: null
+            },
+            transferTokenData: {
+              amount: 1.2
+            },
+            offChainData: {
+              method: &quot;decimals&quot;
+            }
+          })
+        }
+  }
+
+async function proxyTest(proxy, data) {
+    let receiver = data.receiver
+    let contractData = data.contractData
+
+    let transferData = data.transferData
+    let transferTokenData = data.transferTokenData
+    let offChainData = data.offChainData
+
+    let loginCheck = await proxy.isLogin()
+
+    console.log(&quot;login: &quot;, loginCheck)
+    if(!loginCheck.data) {
+      let link = await proxy.link()
+      console.log(&quot;link: &quot;, link)
+      if(!link.data) {
+        console.log(&quot;need login&quot;)
+        return
+      }
+    }
+
+    let transferResult = await proxy.transfer(receiver, transferData.amount, transferData.memo, transferData.extra)
+    console.log(&quot;transfer: &quot;, transferResult)
+
+    let contractLoadResult = await proxy.loadContract(contractData.abi, contractData.address)
+    console.log(&quot;contract: &quot;, contractLoadResult)
+    if(!contractLoadResult.data) {
+      console.log(&quot;contract load failed&quot;)
+      return
+    }
+
+    let contractWrapper = contractLoadResult.data
+    let transferTokenResult = await proxy.transferToken(contractWrapper, receiver, transferTokenData.amount,  transferTokenData.extra)
+    console.log(&quot;transfer token: &quot;, transferTokenResult)
+
+    let offChainCallResult = await proxy.offChainCall(contractWrapper, offChainData.method)
+    console.log(&quot;off chain call: &quot;, offChainCallResult)
+  }
+
+</code></pre>
+
+<p>This example is using MetaMask Wrapper <a href="https://github.com/sealsc/web-extension-metamask">sealsc-web-extension-metamask</a>.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../loader/" class="btn btn-neutral" title="Loader"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../loader/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
