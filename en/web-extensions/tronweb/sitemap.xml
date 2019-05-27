@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+     <loc>https://sealsc.github.io/documents/en/web-extensions/tronweb/</loc>
+     <lastmod>2019-05-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://sealsc.github.io/documents/en/web-extensions/tronweb/page/apiRef/extensionWrapper/</loc>
+     <lastmod>2019-05-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://sealsc.github.io/documents/en/web-extensions/tronweb/page/apiRef/extensionChecker/</loc>
+     <lastmod>2019-05-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://sealsc.github.io/documents/en/web-extensions/tronweb/page/apiRef/extensionContractCaller/</loc>
+     <lastmod>2019-05-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://sealsc.github.io/documents/en/web-extensions/tronweb/page/apiRef/extensionActions/</loc>
+     <lastmod>2019-05-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+</urlset>
